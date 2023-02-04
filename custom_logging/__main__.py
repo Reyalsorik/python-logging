@@ -109,7 +109,7 @@ def _get_custom_adapter(name: str) -> logging.LoggerAdapter:
 
     :param name: unique name
     """
-    return CustomLogAdapter(logging.getLogger(f"{LOGGER_NAME}_{name.upper()}"), name=name)  # Extend original logger
+    return CustomLogAdapter(logging.getLogger(name.upper()), name=name)  # Extend original logger
 
 
 def _get_configured_stdout_handler(level: str, disable_color: bool) -> logging.StreamHandler:
