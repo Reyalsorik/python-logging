@@ -185,7 +185,7 @@ def configure_logging(verbose: int = 0, disable_color: bool = False, skip_loggin
     logger.log(logger.level, f"Verbosity level: {logger_name} = {logging.getLevelName(logger.level)}")  # Log verbosity level
 
 
-def get_custom_logger(verbose: int, disable_color: bool, skip_logging: bool, name: str = "DEFAULT") -> logging.LoggerAdapter:
+def get_custom_logger(verbose: int = 0, disable_color: bool = False, skip_logging: bool = False, name: str = "DEFAULT") -> logging.LoggerAdapter:
     """Get a custom configured logger.
 
     :param verbose: level of verbosity
